@@ -1,0 +1,232 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f2f5ef;
+  color: #17251d;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.folha {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #fcfdfb;
+  border-left: 2px solid #1f6b45;
+  border-right: 2px solid #1f6b45;
+}
+
+.barra-formula {
+  display: flex;
+  background: #e6eee6;
+  border-bottom: 1px solid #cbd6cd;
+}
+
+.barra-formula span {
+  padding: 8px 14px;
+  border-right: 1px solid #cbd6cd;
+}
+
+.barra-formula span:nth-child(2) {
+  color: #1f6b45;
+  font-weight: bold;
+}
+
+.barra-formula span:last-child { flex: 1; }
+
+.apresentacao {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.foto {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffe45c;
+  border: 3px solid #1f6b45;
+  color: #14472d;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.funcao { color: #1f6b45; font-weight: bold; }
+
+h1 {
+  margin: 8px 0 14px;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.resumo { color: #4a5a50; }
+
+.botao {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #1f6b45;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #1f6b45;
+}
+
+.botao:hover { background: #ffe45c; color: #17251d; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 30px;
+  background: #e6eee6;
+  border-top: 1px solid #cbd6cd;
+  border-bottom: 3px solid #1f6b45;
+}
+
+nav a {
+  padding: 8px 12px;
+  color: #17251d;
+  text-decoration: none;
+  background: white;
+  border: 1px solid #cbd6cd;
+}
+
+nav a:hover { background: #ffe45c; }
+
+section {
+  padding: 30px 40px;
+  border-bottom: 1px solid #cbd6cd;
+}
+
+h2 {
+  width: fit-content;
+  margin: 0 0 22px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #1f6b45;
+  font-size: 28px;
+}
+
+h3 { margin: 8px 0; font-size: 19px; }
+p { margin: 0 0 14px; }
+
+.colunas {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 25px;
+}
+
+.dados { margin: 0; border: 1px solid #cbd6cd; }
+
+.dados div {
+  display: flex;
+  border-bottom: 1px solid #cbd6cd;
+}
+
+.dados div:last-child { border-bottom: 0; }
+
+.dados dt, .dados dd { margin: 0; padding: 9px; }
+
+.dados dt {
+  width: 120px;
+  flex-shrink: 0;
+  background: #f2f5ef;
+  font-weight: bold;
+}
+
+.formacao {
+  padding-left: 24px;
+  border-left: 3px solid #1f6b45;
+}
+
+.formacao li { padding: 0 0 20px 10px; }
+.situacao { color: #1f6b45; font-weight: bold; }
+
+.experiencia {
+  padding: 20px;
+  border: 1px solid #cbd6cd;
+  border-left: 5px solid #1f6b45;
+}
+
+.experiencia ul { padding-left: 22px; }
+
+.projetos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.projetos article { padding: 18px; border: 1px solid #cbd6cd; }
+
+.tecnologias {
+  padding-top: 10px;
+  border-top: 1px dashed #cbd6cd;
+  color: #4a5a50;
+}
+
+table { width: 100%; border-collapse: collapse; }
+
+th, td {
+  padding: 9px;
+  border: 1px solid #cbd6cd;
+  text-align: left;
+}
+
+thead { background: #1f6b45; color: white; }
+tbody th { background: #f2f5ef; }
+#habilidades h3 { margin: 22px 0 10px; }
+
+.lista { padding-left: 24px; }
+.lista li {
+  margin: 8px 0;
+  padding: 6px 10px;
+  border-left: 4px solid #ffe45c;
+  background: #f2f5ef;
+}
+
+.contatos {
+  max-width: 560px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #cbd6cd;
+}
+
+.contatos li {
+  display: flex;
+  border-bottom: 1px solid #cbd6cd;
+}
+
+.contatos li:last-child { border-bottom: 0; }
+.contatos strong, .contatos a { padding: 10px; }
+.contatos strong { width: 105px; background: #f2f5ef; }
+.contatos a { overflow-wrap: anywhere; color: #14472d; }
+
+footer {
+  padding: 22px 40px;
+  background: #14472d;
+  color: white;
+}
+
+footer p { margin: 0 0 5px; }
+footer a { color: #ffe45c; }
+
+@media (max-width: 700px) {
+  .apresentacao {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  section { padding: 25px; }
+  .colunas, .projetos { grid-template-columns: 1fr; }
+  nav { padding: 10px 20px; }
+  h1 { font-size: 30px; }
+}
+
+@media (max-width: 450px) {
+  .dados div, .contatos li { flex-direction: column; }
+  .dados dt, .contatos strong { width: auto; }
+  table { font-size: 14px; }
+}
